@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Clone Repository') {
+            steps {
+                git 'https://github.com/YOUR_USERNAME/jenkins-exp8.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building the project..."
+                sh 'echo Build Successful'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Running Tests..."
+                sh 'echo Tests Passed'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo "Deploying Application..."
+                sh 'echo Deployment Completed'
+            }
+        }
+    }
+}
