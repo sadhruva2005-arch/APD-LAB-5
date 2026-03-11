@@ -5,29 +5,27 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/jenkins-exp8.git'
+                git 'https://github.com/sadhruva2005-arch/APD-LAB-5.git'
             }
         }
 
         stage('Build') {
             steps {
-                echo "Building the project..."
-                sh 'echo Build Successful'
+                echo 'Building project...'
             }
         }
 
         stage('Test') {
             steps {
-                echo "Running Tests..."
-                sh 'echo Tests Passed'
+                echo 'Running tests...'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo "Deploying Application..."
-                sh 'echo Deployment Completed'
+                echo 'Deploying application...'
             }
         }
+
     }
 }
